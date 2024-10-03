@@ -1,5 +1,5 @@
 import requests
-
+import json 
 
 url = 'https://guilhermeonrails.github.io/api-restaurantes/restaurantes.json'
 response = requests.get(url) # get -> verbo http , para solicitar um recurso
@@ -22,4 +22,7 @@ if response.status_code == 200:
 else: 
     print(f'o erro foi {response.status_code}')
 
-print(dados_restaurante['McDonalds'])
+for nome_do_restaurante, dados in dados_restaurante.items(): 
+    nome_do_arquivo = f'{nome_do_restaurante}.json'
+    with open(nome_do_arquivo, 'w') as arquivo_restaurante: #criação de arquivos
+        json.dump(dados, arquivo_restaurante, indent=4) # criação de arquivo json
