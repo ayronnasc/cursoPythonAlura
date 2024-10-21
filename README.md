@@ -1,1 +1,1 @@
-<h1>Fazendo cursinho de python da alura, pra aprender a viver msm</h1>
+<h1>Cursos de Python Alura</h1>
