@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.secret_key = 'fani'
 
 user1 = Usuario('Ayron','yrin', '1234')
-user2 = Usuario('Carlinhos', 'Dalvio', 'adalvabebe')
+user2 = Usuario('Carlinhos', 'Dalva', 'adalvabebe')
 user3 = Usuario('Luan', 'LuanGameplay', 'ronaldinho')
 
 users = {   user1.nick : user1,
@@ -39,6 +39,7 @@ def criar():
     game_list.append(jogo)
 
     return redirect(url_for('index')) # redirected to the choose path
+
 
 @app.route('/login')
 def login():
